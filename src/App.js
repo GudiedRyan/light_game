@@ -4,11 +4,13 @@ import Box from "./lightbox";
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      on: false
-    }
+  renderBox(i) {
+    return (
+      <Box 
+        value={i}
+        toggle={this.toggle}
+      />
+    )
   }
   render() {
     return(
@@ -18,36 +20,32 @@ class App extends React.Component {
         <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change.</p>
         <div className="m">
         <div className="board">
-          <Box coordinates={[0,3]} onClick={this.toggle}/>
-          <Box coordinates={[1,3]} onClick={this.toggle}/>
-          <Box coordinates={[2,3]} onClick={this.toggle}/>
-          <Box coordinates={[3,3]} onClick={this.toggle}/>
+          {this.renderBox(0)}
+          {this.renderBox(1)}
+          {this.renderBox(2)}
+          {this.renderBox(3)}
           <br></br>
-          <Box coordinates={[0,2]} on={true}/>
-          <Box coordinates={[1,2]}/>
-          <Box coordinates={[2,2]}/>
-          <Box coordinates={[3,2]}/>
+          {this.renderBox(4)}
+          {this.renderBox(5)}
+          {this.renderBox(6)}
+          {this.renderBox(7)}
           <br></br>
-          <Box coordinates={[0,1]}/>
-          <Box coordinates={[1,1]}/>
-          <Box coordinates={[2,1]}/>
-          <Box coordinates={[3,1]}/>
+          {this.renderBox(8)}
+          {this.renderBox(9)}
+          {this.renderBox(10)}
+          {this.renderBox(11)}
           <br></br>
-          <Box coordinates={[0,0]}/>
-          <Box coordinates={[1,0]}/>
-          <Box coordinates={[2,0]}/>
-          <Box coordinates={[3,0]}/>
+          {this.renderBox(12)}
+          {this.renderBox(13)}
+          {this.renderBox(14)}
+          {this.renderBox(15)}
           <br></br>
         </div>
         </div>
       </div>
     )
   }
-  toggle = () => {
-    this.setState(state => ({
-      on: !state.on
-    }))
-  }
+
 }
 
 export default App;
