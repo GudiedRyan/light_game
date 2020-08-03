@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/light_game/static/css/main.5d0c7ce8.chunk.css",
-    "main.js": "/light_game/static/js/main.762b819b.chunk.js",
-    "main.js.map": "/light_game/static/js/main.762b819b.chunk.js.map",
+    "main.js": "/light_game/static/js/main.2d35235d.chunk.js",
+    "main.js.map": "/light_game/static/js/main.2d35235d.chunk.js.map",
     "runtime-main.js": "/light_game/static/js/runtime-main.64a12ac3.js",
     "runtime-main.js.map": "/light_game/static/js/runtime-main.64a12ac3.js.map",
-    "static/js/2.7d47ca6e.chunk.js": "/light_game/static/js/2.7d47ca6e.chunk.js",
-    "static/js/2.7d47ca6e.chunk.js.map": "/light_game/static/js/2.7d47ca6e.chunk.js.map",
+    "static/js/2.aa32437b.chunk.js": "/light_game/static/js/2.aa32437b.chunk.js",
+    "static/js/2.aa32437b.chunk.js.map": "/light_game/static/js/2.aa32437b.chunk.js.map",
     "index.html": "/light_game/index.html",
-    "precache-manifest.11199faa78748c6ed31db1c4fc3a8aa8.js": "/light_game/precache-manifest.11199faa78748c6ed31db1c4fc3a8aa8.js",
+    "precache-manifest.e578f2dab4539fd296b002bc564744bb.js": "/light_game/precache-manifest.e578f2dab4539fd296b002bc564744bb.js",
     "service-worker.js": "/light_game/service-worker.js",
     "static/css/main.5d0c7ce8.chunk.css.map": "/light_game/static/css/main.5d0c7ce8.chunk.css.map",
-    "static/js/2.7d47ca6e.chunk.js.LICENSE.txt": "/light_game/static/js/2.7d47ca6e.chunk.js.LICENSE.txt"
+    "static/js/2.aa32437b.chunk.js.LICENSE.txt": "/light_game/static/js/2.aa32437b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64a12ac3.js",
-    "static/js/2.7d47ca6e.chunk.js",
+    "static/js/2.aa32437b.chunk.js",
     "static/css/main.5d0c7ce8.chunk.css",
-    "static/js/main.762b819b.chunk.js"
+    "static/js/main.2d35235d.chunk.js"
   ]
 }
