@@ -81,13 +81,47 @@ class App extends React.Component {
       </div>
     )
   }
-  toggle = () => {
-    const elementsIndex = this.state.lightboxdata.findIndex(element => element.id)
-    let newArray = [...this.state.lightboxdata];
-    newArray[elementsIndex] = {...newArray[elementsIndex], on: !newArray[elementsIndex].on}
-    this.setState({
-      lightboxdata: newArray
-    });
+  toggle = (event) => {
+    const index = event.target.id -1;
+    let newdata = [...this.state.lightboxdata];
+    newdata[index].on = !newdata[index].on;
+    if (index === 0) {
+      newdata[1].on = !newdata[1].on
+      newdata[3].on = !newdata[3].on
+    } else if (index === 1) {
+      newdata[0].on = !newdata[0].on
+      newdata[2].on = !newdata[2].on
+      newdata[4].on = !newdata[4].on
+    } else if (index === 2) {
+      newdata[1].on = !newdata[1].on
+      newdata[5].on = !newdata[5].on
+    } else if (index === 3) {
+      newdata[0].on = !newdata[0].on
+      newdata[4].on = !newdata[4].on
+      newdata[6].on = !newdata[6].on
+    } else if (index === 4) {
+      newdata[1].on = !newdata[1].on
+      newdata[3].on = !newdata[3].on
+      newdata[5].on = !newdata[5].on
+      newdata[7].on = !newdata[7].on
+    } else if (index === 5) {
+      newdata[2].on = !newdata[2].on
+      newdata[4].on = !newdata[4].on
+      newdata[8].on = !newdata[8].on
+    } else if (index === 6) {
+      newdata[3].on = !newdata[3].on
+      newdata[7].on = !newdata[7].on
+    } else if (index === 7) {
+      newdata[8].on = !newdata[8].on
+      newdata[6].on = !newdata[6].on
+      newdata[4].on = !newdata[4].on
+    } else if (index === 8) {
+      newdata[5].on = !newdata[5].on
+      newdata[7].on = !newdata[7].on
+    } 
+    this.setState(state => ({
+      lightboxdata: newdata
+    }))
   }
 
 }
@@ -108,3 +142,14 @@ export default App;
 //Current Issue: While data is imported, I can't seem to get it into the state
 //In other words, I have this data with no way to manipulate it that I know of
 // ;-;
+
+  // toggle2 = (event) => {
+  //   const elementsIndex = this.state.lightboxdata.findIndex(element => element.id)
+  //   let newArray = [...this.state.lightboxdata];
+  //   newArray[elementsIndex].on = !newArray[elementsIndex].on;
+  //   newArray[elementsIndex+2].on = !newArray[elementsIndex+2].on;
+  //   // newArray[elementsIndex] = {...newArray[elementsIndex], on: !newArray[elementsIndex].on}
+  //   this.setState({
+  //     lightboxdata: newArray
+  //   });
+  // }
