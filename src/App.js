@@ -83,7 +83,7 @@ class App extends React.Component {
         </div>
         </div>
         <div className="box">
-            {/* <button className="app" onClick={this.newGame}>New Game</button> */}
+            <button className="app" onClick={this.newGame}>New Game</button>
         </div>
       </div>
     )
@@ -146,6 +146,62 @@ class App extends React.Component {
     } else this.setState({
       victory: false
     })
+  }
+  newGame = () => {
+    let resetGame = [...this.state.lightboxdata];
+    resetGame[0].on = true
+    let rando = Math.floor(Math.random()*2);
+    if (rando === 1) {
+      resetGame[1].on = true
+    } else {
+      resetGame[1].on = false
+    }
+    let rando2 = Math.floor(Math.random()*2);
+    if (rando2 === 0) {
+      resetGame[2].on = true
+    } else {
+      resetGame[2].on = false
+    }
+    let rando3 = Math.floor(Math.random()*2);
+    if (rando3 === 0) {
+      resetGame[3].on = true
+    } else {
+      resetGame[3].on = false
+    }
+    let rando4 = Math.floor(Math.random()*2);
+    if (rando4 === 1) {
+      resetGame[4].on = true
+    } else {
+      resetGame[4].on = false
+    }
+    let rando5 = Math.floor(Math.random()*2);
+    if (rando5 === 1) {
+      resetGame[5].on = true
+    } else {
+      resetGame[5].on = false
+    }
+    let rando6 = Math.floor(Math.random()*2);
+    if (rando6 === 1) {
+      resetGame[6].on = true
+    } else {
+      resetGame[6].on = false
+    }
+    let rando7 = Math.floor(Math.random()*2);
+    if (rando7 === 1) {
+      resetGame[7].on = true
+    } else {
+      resetGame[7].on = false
+    }
+    let rando8 = Math.floor(Math.random()*2);
+    if (rando8 === 1) {
+      resetGame[8].on = true
+    } else {
+      resetGame[8].on = false
+    }
+
+    this.setState(state => ({
+      lightboxdata: resetGame
+    }))
   }
 }
 
