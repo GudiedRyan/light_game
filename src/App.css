@@ -8,6 +8,11 @@ p {
   text-align: center;
 }
 
+.box {
+  display: flex;
+  justify-content: center;
+}
+
 .grid {
   display: inline-grid;
   grid-template-columns: auto auto auto;
