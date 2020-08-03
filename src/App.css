@@ -8,26 +8,11 @@ p {
   text-align: center;
 }
 
-.m {
-  display: flex;
-  flex-direction: row;
-  justify-content:center;
-  align-items: center;
+.grid {
+  display: inline-grid;
 }
 
-.board {
-  display: flex;
-  min-width: 99px;
-  flex-wrap: wrap;
-  border: 2px solid black;
-  height: 400px;
-  width: 400px;
-  margin: 100px;
-  background-color: antiquewhite;
-}
-
-
-.lightbox {
+.off {
   border: 1px solid black;
   height: 99px;
   margin: .5px;
@@ -35,6 +20,10 @@ p {
   background-color: grey;
 }
 
-#on {
+.on {
+  border: 1px solid black;
+  height: 99px;
+  margin: .5px;
+  width: 99px;
   background-color: yellow;
 }
