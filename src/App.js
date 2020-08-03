@@ -8,6 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      victory: false,
       lightboxdata: [{
         id: 1,
         x: 0,
@@ -70,7 +71,8 @@ class App extends React.Component {
       <div>
         <header><h1>Light Game</h1></header>
 
-        <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change.</p>
+        <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change. Turn off all the lights to win.</p>
+        {this.state.victory? <p>You win!!</p> :<p></p>}
         <div className="box">
         <div className="grid">
           {this.state.lightboxdata.map((boxdata,i) =>
@@ -79,6 +81,9 @@ class App extends React.Component {
             </div>
           )}
         </div>
+        </div>
+        <div className="box">
+            {/* <button className="app" onClick={this.newGame}>New Game</button> */}
         </div>
       </div>
     )
@@ -124,15 +129,29 @@ class App extends React.Component {
     this.setState(state => ({
       lightboxdata: newdata
     }))
-  }
-  victory = () => {
-
+    if (
+      newdata[0].on === false && 
+      newdata[1].on === false &&
+      newdata[2].on === false &&
+      newdata[3].on === false &&
+      newdata[4].on === false &&
+      newdata[5].on === false &&
+      newdata[6].on === false &&
+      newdata[7].on === false &&
+      newdata[8].on === false
+      ) {
+        this.setState({
+          victory: true
+        })
+    } else this.setState({
+      victory: false
+    })
   }
 }
 
 export default App;
 
-
+// Math.floor(Math.random()*2)
 //idea: Let's have all the lightboxes be fed into from an array. Call it box data.
 //Box data will contain: Position: (number), status: (on/off), and an index if that is necessary.
 //We can make it so that clicking on a particular box will cause the adjacent boxes to turn also.
