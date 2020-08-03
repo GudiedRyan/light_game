@@ -15,7 +15,3 @@ class Box extends React.Component{
 }
 
 export default Box;
-
-//<Box data =lightBox.data/>
-//In the file Box.js
-//function Box(props.data){etc…}

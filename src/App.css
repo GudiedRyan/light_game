@@ -10,10 +10,16 @@ p {
 
 .grid {
   display: inline-grid;
+  grid-template-columns: auto auto auto;
+  margin: 2rem;
+  border: solid 2px black;
+  background-color: lightslategray;
+}
+.grid-item {
+  border: solid black .5px;
 }
 
 .off {
-  border: 1px solid black;
   height: 99px;
   margin: .5px;
   width: 99px;
@@ -21,7 +27,6 @@ p {
 }
 
 .on {
-  border: 1px solid black;
   height: 99px;
   margin: .5px;
   width: 99px;

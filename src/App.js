@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      on: false
+
     }
   }
   render() {
@@ -18,26 +18,23 @@ class App extends React.Component {
 
         <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change.</p>
         <div className="grid">
-          <Box boxdata = {lightboxdata[0]} />
-          <Box boxdata = {lightboxdata[1]} />
+          {lightboxdata.map((boxdata,i) =>
+            <div className="grid-item" key={i}>
+              <Box boxdata={lightboxdata[i]} toggle={this.toggle}/>
+            </div>
+          )}
         </div>
-        
       </div>
     )
+  }
+  toggle = () => {
+
   }
 
 }
 
 export default App;
 
-/* <ul>
-                    {this.state.tasks.map((task,i) =>
-                    <li key={i}>
-                        {task}
-                        <button className="del" data-index={i} onClick={this.finishtask}>X</button>
-                    </li>
-                    )}
-                </ul> */
 
 //idea: Let's have all the lightboxes be fed into from an array. Call it box data.
 //Box data will contain: Position: (number), status: (on/off), and an index if that is necessary.
@@ -48,3 +45,7 @@ export default App;
 //What we would need to account for is if there is no x coordinate below: ie, a border box
 //We could create an if statement, basically catching the "out of bounds" boxes and prevent it from crashing
 //start with 3x3
+
+//Current Issue: While data is imported, I can't seem to get it into the state
+//In other words, I have this data with no way to manipulate it that I know of
+// ;-;
