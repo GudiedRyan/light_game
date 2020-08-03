@@ -71,12 +71,14 @@ class App extends React.Component {
         <header><h1>Light Game</h1></header>
 
         <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change.</p>
+        <div className="box">
         <div className="grid">
           {this.state.lightboxdata.map((boxdata,i) =>
             <div className="grid-item" key={i}>
               <Box boxdata={this.state.lightboxdata[i]} toggle={this.toggle}/>
             </div>
           )}
+        </div>
         </div>
       </div>
     )
@@ -123,7 +125,9 @@ class App extends React.Component {
       lightboxdata: newdata
     }))
   }
+  victory = () => {
 
+  }
 }
 
 export default App;
@@ -153,3 +157,5 @@ export default App;
   //     lightboxdata: newArray
   //   });
   // }
+
+  //Idea to check if game is won: check each box's state, if they're all off, the display victory
