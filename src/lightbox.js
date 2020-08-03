@@ -8,9 +8,13 @@ class Box extends React.Component{
                 x={this.props.boxdata.x} 
                 y={this.props.boxdata.y} 
                 id={this.props.boxdata.id}
+                onClick={this.props.toggle}
             >
             </button>
         )
+    }
+    toggle = () => {
+        this.props.toggle()
     }
 }
 

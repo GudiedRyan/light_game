@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import lightboxdata from './lightboxData';
+// import lightboxdata from './lightboxData';
 import Box from "./lightbox";
 
 
@@ -8,7 +8,61 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      lightboxdata: [{
+        id: 1,
+        x: 0,
+        y: 2,
+        on: true
+    },
+    {
+        id: 2,
+        x: 1,
+        y: 2,
+        on: false
+    },
+    {
+        id: 3,
+        x: 2,
+        y: 2,
+        on: true
+    },
+    {
+        id: 4,
+        x: 0,
+        y: 1,
+        on: true
+    },
+    {
+        id: 5,
+        x: 1,
+        y: 1,
+        on: false
+    },
+    {
+        id: 6,
+        x: 2,
+        y: 1,
+        on: false
+    },
+    {
+        id: 7,
+        x: 0,
+        y: 0,
+        on: false
+    },
+    {
+        id: 8,
+        x: 1,
+        y: 0,
+        on: true
+    },
+    {
+        id: 9,
+        x: 2,
+        y: 0,
+        on: true
+    }
+]
     }
   }
   render() {
@@ -18,9 +72,9 @@ class App extends React.Component {
 
         <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change.</p>
         <div className="grid">
-          {lightboxdata.map((boxdata,i) =>
+          {this.state.lightboxdata.map((boxdata,i) =>
             <div className="grid-item" key={i}>
-              <Box boxdata={lightboxdata[i]} toggle={this.toggle}/>
+              <Box boxdata={this.state.lightboxdata[i]} toggle={this.toggle}/>
             </div>
           )}
         </div>
@@ -28,7 +82,12 @@ class App extends React.Component {
     )
   }
   toggle = () => {
-
+    const elementsIndex = this.state.lightboxdata.findIndex(element => element.id)
+    let newArray = [...this.state.lightboxdata];
+    newArray[elementsIndex] = {...newArray[elementsIndex], on: !newArray[elementsIndex].on}
+    this.setState({
+      lightboxdata: newArray
+    });
   }
 
 }
