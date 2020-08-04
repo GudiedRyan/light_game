@@ -85,6 +85,9 @@ class LargerGame extends React.Component{
                         )}
                     </div>
                     </div>
+                    <div className="box">
+                        <button className="app" onClick={this.newGame}>New Game</button>
+                    </div>
               </div>
           )
       }
@@ -185,6 +188,29 @@ class LargerGame extends React.Component{
           victory: false
         })
       }
+      newGame = () => {
+        let resetGame = [...this.state.lightboxdata];
+        resetGame[0].on = true
+        resetGame[1].on = true
+        resetGame[2].on = true
+        resetGame[3].on = true
+        resetGame[4].on = true
+        resetGame[5].on = true
+        resetGame[6].on = true
+        resetGame[7].on = true
+        resetGame[8].on = true
+        resetGame[9].on = true
+        resetGame[10].on = true
+        resetGame[11].on = true
+        resetGame[12].on = true
+        resetGame[13].on = true
+        resetGame[14].on = true
+        resetGame[15].on = true
+        this.setState(state => ({
+          lightboxdata: resetGame,
+          victory: false
+        }))
+    }
 }
 
 export default LargerGame;
