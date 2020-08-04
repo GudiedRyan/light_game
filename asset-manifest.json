@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/light_game/static/css/main.5d0c7ce8.chunk.css",
-    "main.js": "/light_game/static/js/main.2d35235d.chunk.js",
-    "main.js.map": "/light_game/static/js/main.2d35235d.chunk.js.map",
+    "main.css": "/light_game/static/css/main.b6eb7228.chunk.css",
+    "main.js": "/light_game/static/js/main.6cf2b297.chunk.js",
+    "main.js.map": "/light_game/static/js/main.6cf2b297.chunk.js.map",
     "runtime-main.js": "/light_game/static/js/runtime-main.64a12ac3.js",
     "runtime-main.js.map": "/light_game/static/js/runtime-main.64a12ac3.js.map",
     "static/js/2.aa32437b.chunk.js": "/light_game/static/js/2.aa32437b.chunk.js",
     "static/js/2.aa32437b.chunk.js.map": "/light_game/static/js/2.aa32437b.chunk.js.map",
     "index.html": "/light_game/index.html",
-    "precache-manifest.e578f2dab4539fd296b002bc564744bb.js": "/light_game/precache-manifest.e578f2dab4539fd296b002bc564744bb.js",
+    "precache-manifest.c8925b3547c98b9bc3a0d026563d6f18.js": "/light_game/precache-manifest.c8925b3547c98b9bc3a0d026563d6f18.js",
     "service-worker.js": "/light_game/service-worker.js",
-    "static/css/main.5d0c7ce8.chunk.css.map": "/light_game/static/css/main.5d0c7ce8.chunk.css.map",
+    "static/css/main.b6eb7228.chunk.css.map": "/light_game/static/css/main.b6eb7228.chunk.css.map",
     "static/js/2.aa32437b.chunk.js.LICENSE.txt": "/light_game/static/js/2.aa32437b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64a12ac3.js",
     "static/js/2.aa32437b.chunk.js",
-    "static/css/main.5d0c7ce8.chunk.css",
-    "static/js/main.2d35235d.chunk.js"
+    "static/css/main.b6eb7228.chunk.css",
+    "static/js/main.6cf2b297.chunk.js"
   ]
 }

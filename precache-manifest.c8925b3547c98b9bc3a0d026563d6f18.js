@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3145759e35533d553404e4287bfbc8ba",
+    "revision": "11a1d01ddcea5f527d9afa7837003a44",
     "url": "/light_game/index.html"
   },
   {
-    "revision": "5fb05358c8481849f926",
-    "url": "/light_game/static/css/main.5d0c7ce8.chunk.css"
+    "revision": "a2d7f7b5d48a9f522760",
+    "url": "/light_game/static/css/main.b6eb7228.chunk.css"
   },
   {
     "revision": "a67309ef954c5a7bb73e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/light_game/static/js/2.aa32437b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5fb05358c8481849f926",
-    "url": "/light_game/static/js/main.2d35235d.chunk.js"
+    "revision": "a2d7f7b5d48a9f522760",
+    "url": "/light_game/static/js/main.6cf2b297.chunk.js"
   },
   {
     "revision": "8014edc6c06b2612d3be",
