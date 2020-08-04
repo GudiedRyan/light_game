@@ -24,6 +24,17 @@ p {
   border: solid black .5px;
 }
 
+.grid2 {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 2rem;
+  border: solid 2px black;
+  background-color: lightslategray;
+}
+.grid-item2 {
+  border: solid black .5px;
+}
+
 .off {
   height: 99px;
   margin: .5px;

@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-// import lightboxdata from './lightboxData';
 import Box from "./lightbox";
-
+import LargerGame from "./largergame";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       victory: false,
+      show4: false,
       lightboxdata: [{
         id: 1,
         x: 0,
@@ -72,6 +72,7 @@ class App extends React.Component {
         <header><h1>Light Game</h1></header>
 
         <p>Click the boxes to turn off the lights. Whenever you click a box, that box, and the adjacent boxes will all change. Turn off all the lights to win.</p>
+        {this.state.show4? <LargerGame /> : <div>
         {this.state.victory? <p>You win!!</p> :<p></p>}
         <div className="box">
         <div className="grid">
@@ -84,6 +85,11 @@ class App extends React.Component {
         </div>
         <div className="box">
             <button className="app" onClick={this.newGame}>New Game</button>
+        </div>
+        </div>}
+        <br />
+        <div className="box">
+        {this.state.show4? <button onClick={this.changeBoard}>3 x 3 Game</button> : <button onClick={this.changeBoard}>4 x 4 Game</button>}
         </div>
       </div>
     )
@@ -200,7 +206,13 @@ class App extends React.Component {
     }
 
     this.setState(state => ({
-      lightboxdata: resetGame
+      lightboxdata: resetGame,
+      victory: false
+    }))
+  }
+  changeBoard = () => {
+    this.setState(state => ({
+      show4: !state.show4
     }))
   }
 }
