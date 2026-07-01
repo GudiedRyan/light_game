@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-01T16:50:09Z",
+  "title": "Design System: Light Game",
+  "extensions": {
+    "colorMeta": {
+      "signal-yellow": { "role": "primary", "displayName": "Signal Yellow", "canonical": "#f7d51d" },
+      "cathode-blue": { "role": "secondary", "displayName": "Cathode Blue", "canonical": "#5ec8f0" },
+      "slate-off": { "role": "neutral", "displayName": "Slate Off", "canonical": "#3a3f4b" },
+      "near-black": { "role": "neutral", "displayName": "Near-Black", "canonical": "#1e2128" },
+      "panel-charcoal": { "role": "neutral", "displayName": "Panel Charcoal", "canonical": "#262a33" },
+      "off-white": { "role": "neutral", "displayName": "Off-White", "canonical": "#e8e8e8" }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "The 'Light Game' page title only." },
+      "body": { "displayName": "Body", "purpose": "Instructional paragraph text." },
+      "label": { "displayName": "Label", "purpose": "Button and form-control text." }
+    },
+    "shadows": [
+      { "name": "lit-tile-glow", "value": "0 0 12px 2px color-mix(in srgb, #f7d51d 60%, transparent)", "purpose": "Marks an on tile as energized, beyond a flat color change." },
+      { "name": "win-banner-lift", "value": "0 8px 32px rgba(0, 0, 0, 0.4)", "purpose": "The one moment the UI floats above the page, matching the win state change." }
+    ],
+    "motion": [
+      { "name": "transition-speed", "value": "180ms ease", "purpose": "Default transition for tile color, scale, and shadow changes." },
+      { "name": "win-banner-transition", "value": "200ms ease", "purpose": "Opacity and scale transition for the win banner appearing/disappearing." }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Light Tile",
+      "kind": "custom",
+      "refersTo": "cell-off",
+      "description": "The core interactive element: a single grid tile toggled on/off, tiled to form the NxN board.",
+      "html": "<button class=\"ds-cell\" data-on=\"false\" aria-pressed=\"false\" aria-label=\"Light 1, off\"></button>",
+      "css": ".ds-cell { border: none; border-radius: 6px; padding: 0; cursor: pointer; background-color: #3a3f4b; transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease; } .ds-cell[data-on='true'] { background-color: #f7d51d; box-shadow: 0 0 12px 2px color-mix(in srgb, #f7d51d 60%, transparent); } .ds-cell:hover { filter: brightness(1.1); } .ds-cell:active { transform: scale(0.94); } .ds-cell:focus-visible { outline: 2px solid #5ec8f0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "New Game / win-banner action button.",
+      "html": "<button class=\"ds-btn-primary\">New Game</button>",
+      "css": ".ds-btn-primary { background-color: #5ec8f0; color: #1e2128; border: none; border-radius: 6px; padding: 0.5rem 1rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: filter 180ms ease; } .ds-btn-primary:hover { filter: brightness(1.1); } .ds-btn-primary:focus-visible { outline: 2px solid #5ec8f0; outline-offset: 2px; }"
+    },
+    {
+      "name": "Board Container",
+      "kind": "card",
+      "refersTo": null,
+      "description": "The panel that holds the grid of Light Tiles, responsive from 3x3 to 8x8.",
+      "html": "<div class=\"ds-board\"></div>",
+      "css": ".ds-board { display: grid; gap: clamp(4px, 1vmin, 10px); width: min(90vmin, 560px); aspect-ratio: 1 / 1; margin: 2rem auto; padding: clamp(4px, 1vmin, 10px); border-radius: 12px; background-color: #262a33; }"
+    },
+    {
+      "name": "Win Banner",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Centered overlay card shown when the board reaches all-off; fades and scales in.",
+      "html": "<div class=\"ds-win-banner ds-visible\"><p>You win!</p><button class=\"ds-btn-primary\">New Game</button></div>",
+      "css": ".ds-win-banner { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.9); display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2rem 3rem; border-radius: 12px; background-color: #262a33; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); opacity: 0; transition: opacity 200ms ease, transform 200ms ease; } .ds-win-banner.ds-visible { opacity: 1; transform: translate(-50%, -50%) scale(1); } .ds-win-banner p { margin: 0; font-size: 1.75rem; color: #f7d51d; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Arcade",
+    "overview": "Light Game is a single dark panel lit from within: a grid of tiles that either glow or go dark, no chrome around them beyond what's needed to read the state and take the next action. The system rejects SaaS gradients, glassmorphism, and marketing-page hero copy - this is a pocket arcade cabinet, not a landing page. Every surface stays flat and near-black until a tile lights up; the one saturated color in the system is reserved for that lit state, so it reads instantly against the dark field. The palette carries almost no color at rest - Slate Off and Near-Black dominate - so Signal Yellow does real work instead of decoration. Cathode Blue is kept strictly to controls, never to the puzzle tiles themselves, so a player never confuses an on light with a clickable control.",
+    "keyCharacteristics": [
+      "Dark, low-chroma field at rest; one saturated color (yellow) carries all puzzle-state meaning",
+      "Flat by default; a soft glow marks the lit state, a lifted shadow marks the win overlay only",
+      "No decorative gradients, no glassmorphism, no marketing copy or hero treatment",
+      "Every interactive element gives instant, tactile feedback (color shift + scale) on click"
+    ],
+    "rules": [
+      { "name": "The One Light Rule", "body": "Signal Yellow means exactly one thing: a lit tile (or the win headline echoing it). It is never reused for a button, a border, or a decorative accent.", "section": "colors" },
+      { "name": "The No-Display-Font Rule", "body": "Don't introduce a second typeface for polish. The system stack is the point.", "section": "typography" },
+      { "name": "The Two-Shadows Rule", "body": "There are exactly two shadow treatments in this system: the lit-tile glow and the win-banner lift. A third shadow is decoration, not signal.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Signal Yellow exclusive to lit-tile state and the win headline (The One Light Rule).",
+      "Do use the system font stack everywhere; no custom typefaces.",
+      "Do give every interactive element both a color-based and a non-color-based feedback signal (scale, outline) so state isn't conveyed by color alone.",
+      "Do keep the board flat, raised only by Panel Charcoal's contrast against Near-Black."
+    ],
+    "donts": [
+      "Don't introduce SaaS-style gradients, glassmorphism, or hero/marketing-page treatments - this is a puzzle toy, not a landing page.",
+      "Don't add a third shadow treatment beyond the lit-tile glow and the win-banner lift (The Two-Shadows Rule).",
+      "Don't reuse Cathode Blue on puzzle tiles, or Signal Yellow on controls - each color has exactly one job.",
+      "Don't add dashboard chrome (badges, stat counters, nav bars) around the game - the grid is the whole interface."
+    ]
+  }
+}
