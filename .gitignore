@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+
+# local AI harness config
+/.claude
 /.pnp
 .pnp.js
 

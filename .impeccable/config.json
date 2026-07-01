@@ -1,0 +1,5 @@
+{
+  "detector": {
+    "ignoreFiles": [".claude/**", "node_modules/**", "dist/**"]
+  }
+}

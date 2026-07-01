@@ -10,7 +10,7 @@
   padding: 2rem 3rem;
   border-radius: 12px;
   background-color: var(--color-panel);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* impeccable-disable-line design-system-color -- win-banner-lift shadow tint, documented in DESIGN.md Elevation */
   opacity: 0;
   pointer-events: none;
   transition: opacity 200ms ease, transform 200ms ease;
