@@ -1,54 +1,35 @@
-.body {
-  background-color: rgb(241, 80, 80);;
-}
-h1 {
-  text-align: center;
-}
-p {
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 3rem;
   text-align: center;
 }
 
-.box {
+.app header p {
+  max-width: 32rem;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+}
+
+.controls {
   display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.grid {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  margin: 2rem;
-  border: solid 2px black;
-  background-color: lightslategray;
-}
-.grid-item {
-  border: solid black .5px;
-}
-
-.grid2 {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  margin: 2rem;
-  border: solid 2px black;
-  background-color: lightslategray;
-}
-.grid-item2 {
-  border: solid black .5px;
+.controls button {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.off {
-  height: 99px;
-  margin: .5px;
-  width: 99px;
-  background-color: grey;
-}
-
-.on {
-  height: 99px;
-  margin: .5px;
-  width: 99px;
-  background-color: yellow;
-}
-
-.app {
-  text-align: center;
+.controls button:hover {
+  filter: brightness(1.1);
 }
