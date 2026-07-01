@@ -1,0 +1,15 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(var(--board-size), 1fr);
+  gap: var(--cell-gap);
+  width: min(90vmin, 560px);
+  aspect-ratio: 1 / 1;
+  margin: 2rem auto;
+  padding: var(--cell-gap);
+  border-radius: 12px;
+  background-color: var(--color-panel);
+}
+
+.board[data-disabled='true'] {
+  pointer-events: none;
+}
