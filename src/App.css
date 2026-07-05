@@ -33,3 +33,28 @@
 .controls button:hover {
   filter: brightness(1.1);
 }
+
+.site-footer {
+  margin-top: 2.5rem;
+}
+
+.site-footer-link {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-footer-link:hover {
+  filter: brightness(1.1);
+}
+
+.site-footer-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

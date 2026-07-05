@@ -56,6 +56,17 @@ function App() {
       />
 
       <WinBanner visible={won} onNewGame={() => dispatch({ type: 'NEW_GAME' })} />
+
+      <footer className="site-footer">
+        <a
+          className="site-footer-link"
+          href="https://www.ryan-guide.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          See more of my work here!
+        </a>
+      </footer>
     </div>
   );
 }
